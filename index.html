@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Secret Service — Portail interne</title><link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script></head>
+<body>
+<div id="login" class="login"><div class="login-card"><div class="seal">SS</div><div class="eyebrow">SECRET SERVICE • PORTAIL INTERNE</div>
+<h1>AUTHENTIFICATION</h1><p>Accès réservé au personnel autorisé.</p>
+<form id="loginForm"><input id="email" type="email" placeholder="Adresse e-mail" required><input id="password" type="password" placeholder="Mot de passe" required><button>CONNEXION</button></form><p id="err"></p></div></div>
+<div id="app" hidden><aside><div class="brand"><div class="seal mini">SS</div><div><b>SECRET SERVICE</b><small>AGENCY PORTAL</small></div></div><nav id="nav"></nav><div class="system">● Système opérationnel</div></aside>
+<main><header><button class="hamb" onclick="toggleMenu()">☰</button><b id="title">Tableau de bord</b><div><span id="who"></span><button class="ghost" onclick="logout()">Déconnexion</button></div></header><section id="view"></section></main></div>
+<div id="modal" class="modal" hidden><div class="modal-card"><div class="modal-head"><h2>Modifier le compte</h2><button onclick="closeModal()">×</button></div>
+<form id="editForm"><input id="editId" type="hidden"><label>Nom RP<input id="eName" required></label><label>Matricule<input id="eBadge"></label>
+<label>Rôle<select id="eRole"><option>Recrue</option><option>Agent</option><option>Superviseur</option><option>Administration</option><option>Direction</option></select></label>
+<div class="perm"><b>Permissions</b><label><input id="pm" type="checkbox"> Gérer les missions</label><label><input id="pr" type="checkbox"> Voir tous les rapports</label><label><input id="pe" type="checkbox"> Gérer les employés</label><label><input id="pc" type="checkbox"> Gérer les comptes</label></div>
+<label class="inline"><input id="eActive" type="checkbox"> Compte actif</label><button class="primary">Enregistrer</button><p id="formErr"></p></form></div></div>
+<script src="script.js"></script></body></html>
