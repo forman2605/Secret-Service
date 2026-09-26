@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Secret Service — Portail Agent</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="seal">SS</div><div><b>SECRET SERVICE</b><span>AGENCY PORTAL</span></div></div>
+    <nav>
+      <button class="nav active" data-page="dashboard">⌂ <span>Tableau de bord</span></button>
+      <button class="nav" data-page="profile">♙ <span>Mon profil</span></button>
+      <button class="nav" data-page="missions">▣ <span>Missions</span></button>
+      <button class="nav" data-page="reports">▤ <span>Rapports</span></button>
+      <button class="nav" data-page="documents">▥ <span>Documentation</span></button>
+      <button class="nav" data-page="vehicles">▰ <span>Véhicules</span></button>
+      <button class="nav" data-page="announcements">◈ <span>Communications</span></button>
+      <div class="nav-sep"></div>
+      <button class="nav admin-only" data-page="employees">♙ <span>Employés</span></button>
+      <button class="nav admin-only" data-page="admin">⚙ <span>Administration</span></button>
+    </nav>
+    <div class="sidebar-bottom"><span class="status-dot"></span> Système opérationnel</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div><button class="mobile-menu" onclick="toggleSidebar()">☰</button><span id="pageTitle">Tableau de bord</span></div>
+      <div class="top-user"><span class="top-status">● EN SERVICE</span><span id="userMini">Agent 0247</span><button onclick="logout()" class="logout">Déconnexion</button></div>
+    </header>
+    <section id="content" class="content"></section>
+  </main>
+</div>
+
+<div id="login" class="login-screen">
+  <div class="login-card">
+    <div class="login-seal">SS</div>
+    <div class="eyebrow">UNITED STATES SECRET SERVICE</div>
+    <h1>PORTAIL AGENT</h1>
+    <p class="muted">Accès réservé au personnel autorisé.</p>
+    <form id="loginForm">
+      <label>Identifiant<input id="username" placeholder="Matricule ou identifiant" required></label>
+      <label>Mot de passe<input id="password" type="password" placeholder="••••••••" required></label>
+      <button class="primary full">ACCÉDER AU PORTAIL</button>
+    </form>
+    <div class="demo">Démo : <b>agent0247</b> / <b>secret123</b></div>
+    <small>© 2026 Secret Service RP — Système interne</small>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
